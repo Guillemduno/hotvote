@@ -11,7 +11,7 @@ const routes: Routes =[
   {path: "startPage", component: StartPageComponent},
   {path: "entityForm", component: EntityFormComponent},
   {path: "userForm", component: UserFormComponent},
-  {path: "entityEvent", component: EntityEventComponent},
+  {path: "entityEvent", component: EntityEventComponent}
 ];
 
 
