@@ -12,7 +12,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <!--<tr>
                 <th scope="row">
                     <img class="rounded mx-auto d-block float-left" width="72" height="72" src="https://api.adorable.io/avatars/285/abott@adorable.png" alt="evento">
                 </th>
@@ -35,7 +35,13 @@
                   <button type="button" class="btn btn-primary btn-sm" routerLink="/entityEditEvent"><i class="small material-icons">mode_edit</i></button>
                   <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#deleteEvent"><i class="small material-icons">delete_forever</i></button>
                 </td>
+              </tr>-->
+              <tr *ngIf="articulos">
+                <td *ngFor="let articulo of articulos; let index = i">
+                  <h1>{{articulo.id}}. {{articulo.title}}</h1>
+                </td>
               </tr>
+
             </tbody>
           </table>
 
