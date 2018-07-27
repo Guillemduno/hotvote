@@ -16,20 +16,48 @@
                 <th scope="row">
                     <img class="rounded mx-auto d-block float-left" width="72" height="72" src="https://api.adorable.io/avatars/285/abott@adorable.png" alt="evento">
                 </th>
+                <td colspan="3">
+                  <h3>Título del evento <i class="small material-icons">lock_outline</i></h3>
+                  <p>30/07/2018 - 31/07/2018</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus est, viverra at nulla et, aliquam tincidunt dui. Nulla quis odio a velit rhoncus tincidunt ut sit amet magna.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                    <img class="rounded mx-auto d-block float-left" width="72" height="72" src="https://api.adorable.io/avatars/287/albert@adorable.io" alt="evento">
+                </th>
                 <td colspan="2">
-                  <h3>Título del evento</h3>
-                  <p>Fecha del evento</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus est, viverra at nulla et, aliquam tincidunt dui. Nulla quis odio a velit rhoncus tincidunt ut sit amet magna. Vestibulum rhoncus venenatis mi in mattis. Suspendisse cursus feugiat dolor, a ultricies mauris aliquam quis. Nam pulvinar dolor non augue finibus vehicula. Duis in arcu in massa bibendum ultrices. Suspendisse et nisi hendrerit, dapibus urna non, tristique justo. Nullam vel arcu vitae ante tempor porttitor et eget lacus. Morbi id tincidunt dolor, eu lacinia magna. In venenatis suscipit nisi, in egestas orci interdum et. Mauris id nibh nec tortor lobortis congue id at nibh.
-
-                    </p>
+                  <h3>Título del evento <i class="small material-icons">lock_open</i></h3>
+                  <p>30/07/2018 - 31/07/2018</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus est, viverra at nulla et, aliquam tincidunt dui. Nulla quis odio a velit rhoncus tincidunt ut sit amet magna.</p>
                 </td>
                 <td>
-                  <button type="button" class="btn btn-primary btn-sm" routerLink="/entityEditEvent">Editar</button>
-                  <button type="button" class="btn btn-secondary btn-sm">Borrar</button>
+                  <button type="button" class="btn btn-primary btn-sm" routerLink="/entityEditEvent"><i class="small material-icons">mode_edit</i></button>
+                  <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#deleteEvent"><i class="small material-icons">delete_forever</i></button>
                 </td>
               </tr>
             </tbody>
           </table>
+
+          <!-- Modal -->
+          <div class="modal fade" id="deleteEvent" tabindex="-1" role="dialog" aria-labelledby="borrarEvento" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="borrarEvento">Borrar evento</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ¿Estás seguro/a que quieres borrar este evento?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-danger">Borrar evento</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
-    
 </div>
