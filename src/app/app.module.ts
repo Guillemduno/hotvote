@@ -8,6 +8,7 @@ import { EntityFormComponent } from './entity-form/entity-form.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { EntityEventComponent } from './entity-event/entity-event.component';
 import { HeaderComponent } from './header/header.component';
+import { EntityEditEventComponent } from './entity-edit-event/entity-edit-event.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HeaderComponent } from './header/header.component';
     EntityFormComponent,
     UserFormComponent,
     EntityEventComponent,
-    HeaderComponent
+    HeaderComponent,
+    EntityEditEventComponent
   ],
   imports: [
     BrowserModule,
