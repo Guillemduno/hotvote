@@ -9,6 +9,7 @@ import { StartPageComponent } from './start-page/start-page.component';
 import { EntityFormComponent } from './entity-form/entity-form.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { EntityEventComponent } from './entity-event/entity-event.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EntityEventComponent } from './entity-event/entity-event.component';
     StartPageComponent,
     EntityFormComponent,
     UserFormComponent,
-    EntityEventComponent
+    EntityEventComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,

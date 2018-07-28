@@ -1,8 +1,5 @@
 <p>
   entity-event works!
 </p>
-<ul *ngIf="articulos">
-  <li *ngFor="let articulo of articulos; let index = i">{{articulo.id}}. {{articulo.title}}</li>
-</ul>
-<span *ngIf="!articulos">LOADING</span>
+<app-posts></app-posts>
 <button routerLink="/startPage">BACK</button>
