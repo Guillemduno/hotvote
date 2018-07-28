@@ -1,6 +1,6 @@
 <h1>Entity form</h1>
 
-<form #formEntity="ngForm" (ngSubmit)="onSubmit()">
+<form #formEntity="ngForm" (ngSubmit)="onSubmit(); formEntity.reset();">
 
   <p>
     <label>Name:</label>
@@ -22,15 +22,21 @@
   </p>
 
 <p>
-    <input type="submit" value="Guardar" > <!--routerLink="/entityEvent"-->
+    <input type="submit" value="Guardar" [disabled]="!formEntity.form.valid" >
 </p>
  
 </form>
 <p>
+    <button routerLink="/entityEvent">Go Event</button>
+</p>
+<p>
     <button routerLink="/startPage">BACK</button>
 </p>
 
-
-<p>{{entity.name}}</p>
-<p>{{entity.email}}</p>
-<p>{{entity.password}}</p>
+<ul>
+  <li *ngFor="let entity of entities">
+      <p>{{entity.name}}</p>
+      <p>{{entity.email}}</p>
+      <p>{{entity.password}}</p>
+  </li>
+</ul>
