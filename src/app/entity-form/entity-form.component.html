@@ -1,8 +1,36 @@
 <h1>Entity form</h1>
-<form>
-  <input placeholder="Email">
-  <input placeholder="Password">
-  <button routerLink="/entityEvent">Submit</button>
-</form>
 
-<button routerLink="/startPage">BACK</button>
+<form #formEntity="ngForm" (ngSubmit)="onSubmit()">
+
+  <p>
+    <label>Name:</label>
+    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="entity.name" placeholder="Name" required pattern="[a-zA-Z]+">
+    
+        <span *ngIf="nombre.touched && !nombre.valid">*El campo no es correcto</span>
+  </p>
+
+<p>
+  <label>Email:</label>
+    <input type="text" name="email" #email="ngModel" [(ngModel)]="entity.email" placeholder="Email" required>
+    <span *ngIf="email.touched && !email.valid">*El campo no es correcto</span>
+</p>
+
+<p>
+  <label>Password</label>
+    <input type="text" name="password" #password="ngModel" [(ngModel)]="entity.password" placeholder="Password" required pattern="[0-9]+">
+    <span *ngIf="password.touched && !password.valid">*El campo no es correcto</span>
+  </p>
+
+<p>
+    <input type="submit" value="Guardar" > <!--routerLink="/entityEvent"-->
+</p>
+ 
+</form>
+<p>
+    <button routerLink="/startPage">BACK</button>
+</p>
+
+
+<p>{{entity.name}}</p>
+<p>{{entity.email}}</p>
+<p>{{entity.password}}</p>
