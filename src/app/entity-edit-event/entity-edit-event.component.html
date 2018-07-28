@@ -1,5 +1,51 @@
 <div class="container">
-  <form action="">
-    
+  <button type="button" class="btn btn-light" routerLink="/startPage">Volver</button>
+  <h1 class="mt-5">Editar evento</h1>
+  <form action="post" class="form-group" id="editarEvento">
+    <div class="form-group">
+      <label for="imgEvento" class="col-form-label">Imagen del evento</label>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="imgEvento" lang="es">
+        <label class="custom-file-label" for="imgEvento">Seleccionar imagen</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="tituloEvento" class="col-form-label">Nombre del evento</label>
+      <input class="form-control" type="text" value="Título del evento" id="tituloEvento">
+    </div>
+    <div class="form-group row">
+      <label for="fechaInicioEvento" class="col-md-2 col-lg-2 col-sm-12 col-form-label">Fecha de inicio</label>
+      <div class="col-md-4 col-lg-4 col-sm-12">
+        <input class="form-control" type="date" value="30-07-2018" id="fechaInicioEvento">
+      </div>
+      <label for="fechaFinEvento" class="col-md-2 col-lg-2 col-sm-12 col-form-label">Fecha de finalización</label>
+      <div class="col-md-4 col-lg-4 col-sm-12">
+        <input class="form-control" type="date" value="31-07-2018" id="fechaFinEvento">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="tipoEvento" class="col-form-label">Tipo de evento</label>
+      <select class="custom-select" id="tipoEvento">
+        <option selected>Junta de propietarios</option>
+        <option value="1">Uno</option>
+        <option value="2">Dos</option>
+        <option value="3">Tres</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="descripcionEvento" class="col-form-label">Descripción del evento</label>
+      <textarea class="form-control" id="descripcionEvento" rows="3">Escribe de qué trata el evento...</textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Guardar cambios</button>
+  </form>
+  <h2 class="mt-5">Editar participantes</h2>
+  <a href="#"><span class="badge badge-pill badge-light"><i class="material-icons">add</i> Añadir participante</span></a>
+  <form action="post" id="anadirParticipante" class="form-group">
+    <div class="input-group mb-3">
+      <input type="email" class="form-control form-control-lg" placeholder="nombre-de-cuenta@dominio.com" aria-label="Cuenta de correo del usuario">
+      <div class="input-group-append">
+        <button class="btn btn-outline-primary" type="button"><span class="material-icons">send</span></button>
+      </div>
+    </div>
   </form>
 </div>
