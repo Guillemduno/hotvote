@@ -1,0 +1,116 @@
+<div class="container">
+  <button type="button" class="btn btn-light" routerLink="/userEvent">Volver</button>
+</div>
+<div class="container-fluid no-bordes mt-4">
+  <div class="jumbotron jumbotron-fluid bg-cover shadow-lg p-3 mb-5">
+    <div class="container text-center">
+      <h1 class="mb-5">Lorem Ipsum</h1>
+      <div class="align-text-bottom">
+        <img class="rounded-circle mx-auto d-block shadow-lg p-3 mb-5 rounded" width="200" height="200" src="https://api.adorable.io/avatars/285/abott@adorable.png" alt="user">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container text-center">
+  <p class="mb-5">30/07/2018-31/07/2018</p>
+  <p class="lead mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum a excepturi, aspernatur illo temporibus debitis eligendi laboriosam corporis, quaerat in dolor minus, aut voluptates similique libero voluptatum deleniti. Pariatur, officiis?</p>
+  <h2 class="py-3">Preguntas</h2>
+  <h3 class="py-3">Lorem ipsum?</h3>
+  <form method="post" action="" class="form-group">
+    <div class="form-row">
+      <div class="col-12 col-sm-12 col-md-4">
+          <button type="button" class="btn btn-primary btn-lg btn-block active" id="buttonAgree"><i class="material-icons">check</i><span class="align-text-bottom"> A favor</span></button>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4">
+          <button type="button" class="btn btn-primary btn-lg btn-block disabled" id="buttonDisagree"><i class="material-icons">close</i><span class="align-text-bottom"> En contra</span></button>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4">
+          <button type="button" class="btn btn-primary btn-lg btn-block disabled" id="buttonAbstention"><i class="material-icons">pause</i><span class="align-text-bottom"> Abstención</span></button>
+      </div>
+    </div>
+    <div class="form-group text-left mt-4">
+        <label for="descriptionEvent" class="col-form-label">Comentarios</label>
+        <textarea class="form-control mb-3" id="descriptionEvent" rows="3">Deja aquí tus comentarios relacionados con la pregunta...</textarea>
+        <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#savedChanges"><i class="material-icons">save</i><span class="align-text-bottom"> Guardar</span></button>
+    </div>
+  </form>
+  <h3 class="py-3">Lorem ipsum?</h3>
+  <form method="post" action="" class="form-group">
+    <div class="form-row">
+      <div class="col-12 col-sm-12 col-md-4">
+          <button type="button" class="btn btn-primary btn-lg btn-block disabled" id="buttonAgree"><i class="material-icons">check</i><span class="align-text-bottom"> A favor</span></button>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4">
+          <button type="button" class="btn btn-primary btn-lg btn-block active" id="buttonDisagree"><i class="material-icons">close</i><span class="align-text-bottom"> En contra</span></button>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4">
+          <button type="button" class="btn btn-primary btn-lg btn-block disabled" id="buttonAbstention"><i class="material-icons">pause</i><span class="align-text-bottom"> Abstención</span></button>
+      </div>
+    </div>
+    <div class="form-group text-left mt-4">
+        <label for="descriptionEvent" class="col-form-label">Comentarios</label>
+        <textarea class="form-control mb-3" id="descriptionEvent" rows="3">Deja aquí tus comentarios relacionados con la pregunta...</textarea>
+        <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#savedChanges"><i class="material-icons">save</i><span class="align-text-bottom"> Guardar</span></button>
+    </div>
+  </form>
+  <h3 class="py-3">Lorem ipsum?</h3>
+  <form method="post" action="" class="form-group">
+    <div class="form-row">
+      <div class="col-12 col-sm-12 col-md-4">
+          <button type="button" class="btn btn-primary btn-lg btn-block disabled" id="buttonAgree"><i class="material-icons">check</i><span class="align-text-bottom"> A favor</span></button>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4">
+          <button type="button" class="btn btn-primary btn-lg btn-block disabled" id="buttonDisagree"><i class="material-icons">close</i><span class="align-text-bottom"> En contra</span></button>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4">
+          <button type="button" class="btn btn-primary btn-lg btn-block active" id="buttonAbstention"><i class="material-icons">pause</i><span class="align-text-bottom"> Abstención</span></button>
+      </div>
+    </div>
+    <div class="form-group text-left mt-4">
+        <label for="descriptionEvent" class="col-form-label">Comentarios</label>
+        <textarea class="form-control mb-3" id="descriptionEvent" rows="3">Deja aquí tus comentarios relacionados con la pregunta...</textarea>
+        <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#savedChanges"><i class="material-icons">save</i><span class="align-text-bottom"> Guardar</span></button>
+    </div>
+  </form>
+</div>
+<div class="container mt-5 mb-5">
+    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#votesSent">Enviar votaciones</button>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="savedChanges" tabindex="-1" role="dialog" aria-labelledby="cambiosGuardados" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cambios guardados</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Los cambios han sido guardados satisfactóriamente.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="votesSent" tabindex="-1" role="dialog" aria-labelledby="votosEnviados" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Votos enviados</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Tus votos para este evento han sido enviados correctamente.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,56 @@
+<div class="container">
+    <table class="table table-hover table-responsive">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Entidad</th>
+            <th scope="col" colspan="2">Evento</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="articulos">
+          <tr *ngFor="let articulo of articulos; let index = i">
+            <th scope="row">
+                {{articulo.id}}
+            </th>
+            <td width="70">
+                <img class="rounded mx-auto d-block float-left" width="72" height="72" src="https://api.adorable.io/avatars/285/abott@adorable.png" alt="evento">
+            </td>
+            <td colspan="2">
+              <h3>{{articulo.title}}<i class="small material-icons">lock_outline</i></h3>
+              <p>30/07/2018 - 31/07/2018</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus est, viverra at nulla et, aliquam tincidunt dui. Nulla quis odio a velit rhoncus tincidunt ut sit amet magna.</p>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary btn-sm" routerLink="/userResultsEvent"><i class="material-icons">insert_chart</i> Ver resultados</button>
+              </td>
+          </tr>
+          <tr>
+            <th scope="row">
+                idArticulo
+            </th>
+            <td>
+                <img class="rounded mx-auto d-block float-left" width="72" height="72" src="https://api.adorable.io/avatars/287/albert@adorable.io" alt="evento">
+            </td>
+            <td colspan="2">
+              <h3>Título del evento <i class="small material-icons">lock_open</i></h3>
+              <p>30/07/2018 - 31/07/2018</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus est, viverra at nulla et, aliquam tincidunt dui. Nulla quis odio a velit rhoncus tincidunt ut sit amet magna.</p>
+            </td>
+            <td>
+              <button type="button" class="btn btn-primary btn-sm" routerLink="/userVoteEvent"><i class="material-icons">playlist_add_check</i> Votar</button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+
+    <nav aria-label="Listado de eventos">
+      <ul class="pagination justify-content-end">
+        <li class="page-item"><a class="page-link" href="#">Atrás</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Adelante</a></li>
+      </ul>
+    </nav>
+</div>

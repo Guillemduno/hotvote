@@ -1,0 +1,126 @@
+<div class="container">
+    <button type="button" class="btn btn-light" routerLink="/entityEvent">Volver</button>
+    <div class="py-5 text-center">
+      <h1>Agregar evento</h1>
+    </div>
+    
+    <form method ="post" action="" class="form-group" id="addEvent">
+      <div class="form-group">
+        <label for="imageEvent" class="col-form-label">Imagen del evento</label>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="imageEvent" lang="es">
+          <label class="custom-file-label" for="imageEvent">Seleccionar imagen</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="titleEvent" class="col-form-label">Nombre del evento</label>
+        <input class="form-control" type="text" placeholder="Título del evento" id="titleEvent">
+      </div>
+      <div class="form-group row">
+        <label for="fechaInicioEvento" class="col-md-2 col-lg-2 col-sm-12 col-form-label">Fecha de inicio</label>
+        <div class="col-md-4 col-lg-4 col-sm-12">
+          <input class="form-control" type="date" value="30-07-2018" id="dateStartEvent">
+        </div>
+        <label for="fechaFinEvento" class="col-md-2 col-lg-2 col-sm-12 col-form-label">Fecha de finalización</label>
+        <div class="col-md-4 col-lg-4 col-sm-12">
+          <input class="form-control" type="date" value="31-07-2018" id="dateFinishEvent">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="typeEvent" class="col-form-label">Tipo de evento</label>
+        <select class="custom-select" id="typeEvent">
+          <option selected>Junta de propietarios</option>
+          <option value="1">Uno</option>
+          <option value="2">Dos</option>
+          <option value="3">Tres</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="descriptionEvent" class="col-form-label">Descripción del evento</label>
+        <textarea class="form-control" id="descriptionEvent" rows="3">Escribe de qué trata el evento...</textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#savedChanges"><i class="material-icons">save</i>Guardar cambios</button>
+    </form>
+    <div class="py-3 text-center">
+        <h2>Agregar preguntas</h2>
+    </div>
+    <a href="#"><span class="badge badge-pill badge-light mb-4"><i class="material-icons">add</i> Añadir pregunta</span></a>
+    <form method ="post" action="" id="addQuestion" class="form-group">
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Pregunta 1" id="questionEvent">
+      </div>
+      <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#savedChanges"><i class="material-icons">save</i>Guardar cambios</button>
+    </form>
+    <div class="py-3 text-center">
+      <h2>Agregar participantes</h2>
+    </div>
+    <a href="#"><span class="badge badge-pill badge-light mb-4"><i class="material-icons">add</i> Añadir participante</span></a>
+    <form method ="post" action="" id="addPartaker" class="form-group">
+      <div class="input-group mb-3">
+        <input type="email" class="form-control" placeholder="nombre-de-cuenta@dominio.com" aria-label="Cuenta de correo del usuario">
+        <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="submit" data-toggle="modal" data-target="#partakerEmail"><span class="material-icons">send</span></button>
+        </div>
+      </div>
+    </form>
+    <form method ="post" action="" id="insertPartaker" class="form-group mb-5">
+      <div class="form-group row align-items-center">
+        <div class="col-sm-6">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="idPartaker">
+            <label class="form-check-label" for="idPartaker">
+              Nombre del participante
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <select class="custom-select" id="assignedVotes">
+            <option selected>Votos asignados</option>
+            <option value="1">Uno</option>
+            <option value="2">Dos</option>
+            <option value="3">Tres</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#savedChanges"><i class="material-icons">save</i>Guardar cambios</button>
+    </form>
+    <!-- Modal -->
+    <div class="modal fade" id="savedChanges" tabindex="-1" role="dialog" aria-labelledby="cambiosGuardados" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cambios guardados</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Los cambios han sido guardados satisfactóriamente.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="partakerEmail" tabindex="-1" role="dialog" aria-labelledby="emailEnviado" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">E-mail enviado</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Se ha enviado un correo electrónico con invitación al usuario para que se una este evento.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

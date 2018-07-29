@@ -1,21 +1,22 @@
 <div class="container">
     <button type="button" class="btn btn-light" routerLink="/startPage">Volver</button>
-    <h1>Entity form</h1>
-    <img class="rounded mx-auto d-block" width="72" height="72" src="https://api.adorable.io/avatars/285/abott@adorable.png" alt="user">
-    <form action="post" class="form-signin">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div class="py-5 text-center">
+        <h1>Iniciar sesión</h1>
+    </div>
+    <form method ="post" action="" id="entitySignin" class="mt-5 mb-5">
+        <div class="form-group">
+            <label for="emailEntity">Cuenta de correo electrónico</label>
+            <input type="email" class="form-control" id="emailEntity" aria-describedby="emailHelp" placeholder="nombre-de-cuenta@dominio.com">
+            <small id="emailHelp" class="form-text text-muted">No compartiremos tus datos con nadie más.</small>
         </div>
         <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="passwordEntity">Contraseña</label>
+            <input type="password" class="form-control" id="passwordEntity" placeholder="Password">
         </div>
-        <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary" routerLink="/entityEvent">Submit</button>
+        <button type="submit" class="btn btn-primary" routerLink="/entityEvent">Iniciar sesión</button>
     </form>
+    <hr>
+    <div class="row text-center mb-5">
+        <p class="mb-5">¿No estás registrado? <a href="/entitySignUp">Crea ahora tu cuenta</a>.</p>
+    </div>
 </div>

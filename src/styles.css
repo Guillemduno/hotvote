@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-nav{
-    margin-bottom: 60px;
-}
-
 a{
     color: #4AA308;
+}
+
+a:hover{
+    color: #496D17;
 }

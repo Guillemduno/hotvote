@@ -11,8 +11,4 @@ export class UserFormComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  showAlert(){
-    alert("El log in user doesn't work...");
-  }
 }

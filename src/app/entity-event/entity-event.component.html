@@ -1,6 +1,6 @@
 <div class="container">
-    <button type="button" class="btn btn-light" routerLink="/startPage">Volver</button>
-    <table class="table table-hover">
+    <button type="button" class="btn btn-primary btn-lg btn-block mb-5 mt-5" routerLink="/entityInsertEvent"><i class="material-icons">add</i> Insertar evento</button>
+    <table class="table table-hover table-responsive">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -23,33 +23,44 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus est, viverra at nulla et, aliquam tincidunt dui. Nulla quis odio a velit rhoncus tincidunt ut sit amet magna.</p>
             </td>
             <td>
-                <button type="button" class="btn btn-primary btn-sm" disabled><i class="material-icons">mode_edit</i></button>
-                <button type="button" class="btn btn-secondary btn-sm" disabled><i class="material-icons">delete_forever</i></button>
+                <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#recordSent"><i class="material-icons">picture_as_pdf</i> Enviar acta</button>
+                <button type="button" class="btn btn-primary btn-sm"><i class="material-icons">subject</i> Ver acta</button>
               </td>
           </tr>
           <tr>
             <th scope="row">
-                <img class="rounded mx-auto d-block float-left" width="72" height="72" src="https://api.adorable.io/avatars/287/albert@adorable.io" alt="evento">
+              idArticulo
             </th>
-            <td colspan="2">
-              <h3>Título del evento <i class="small material-icons">lock_open</i></h3>
-              <p>30/07/2018 - 31/07/2018</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus est, viverra at nulla et, aliquam tincidunt dui. Nulla quis odio a velit rhoncus tincidunt ut sit amet magna.</p>
-            </td>
             <td>
+                <img class="rounded mx-auto d-block float-left" width="72" height="72" src="https://api.adorable.io/avatars/287/albert@adorable.io" alt="evento">
+            </td>
+            <td colspan="3">
+              <h3>Título del evento <i class="small material-icons">lock_open</i></h3>
               <button type="button" class="btn btn-primary btn-sm" routerLink="/entityEditEvent"><i class="material-icons">mode_edit</i></button>
               <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#deleteEvent"><i class="material-icons">delete_forever</i></button>
+              <p>30/07/2018 - 31/07/2018</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus est, viverra at nulla et, aliquam tincidunt dui. Nulla quis odio a velit rhoncus tincidunt ut sit amet magna.</p>
             </td>
           </tr>
         </tbody>
     </table>
+
+    <nav aria-label="Listado de eventos">
+      <ul class="pagination justify-content-end">
+        <li class="page-item"><a class="page-link" href="#">Atrás</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Adelante</a></li>
+      </ul>
+    </nav>
 
     <!-- Modal -->
     <div class="modal fade" id="deleteEvent" tabindex="-1" role="dialog" aria-labelledby="borrarEvento" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="borrarEvento">Borrar evento</h5>
+            <h5 class="modal-title">Borrar evento</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -59,7 +70,25 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-danger">Borrar evento</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#eventDeleted">Borrar evento</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="eventDeleted" tabindex="-1" role="dialog" aria-labelledby="eventoBorrado" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Evento borrado</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            El evento ha sido borrado satisfactoriamente.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
           </div>
         </div>
       </div>
