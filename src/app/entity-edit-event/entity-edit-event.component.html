@@ -11,7 +11,7 @@
     </div>
     <div class="form-group">
       <label for="tituloEvento" class="col-form-label">Nombre del evento</label>
-      <input class="form-control" type="text" value="Título del evento" id="tituloEvento">
+      <input class="form-control" type="text" placeholder="Título del evento" id="tituloEvento">
     </div>
     <div class="form-group row">
       <label for="fechaInicioEvento" class="col-md-2 col-lg-2 col-sm-12 col-form-label">Fecha de inicio</label>
@@ -38,14 +38,49 @@
     </div>
     <button class="btn btn-primary" type="submit">Guardar cambios</button>
   </form>
+  <h2 class="mt-5">Editar preguntas</h2>
+  <a href="#"><span class="badge badge-pill badge-light"><i class="material-icons">add</i> Añadir pregunta</span></a>
+  <form action="post" id="editarPregunta" class="form-group">
+    <div class="form-group">
+      <div class="input-group mb-3">
+        <input class="form-control" type="text" placeholder="Pregunta 1" id="tituloEvento">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-secondary btn-sm"><i class="material-icons">delete_forever</i></button>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Guardar cambios</button>
+  </form>
   <h2 class="mt-5">Editar participantes</h2>
   <a href="#"><span class="badge badge-pill badge-light"><i class="material-icons">add</i> Añadir participante</span></a>
   <form action="post" id="anadirParticipante" class="form-group">
     <div class="input-group mb-3">
-      <input type="email" class="form-control form-control-lg" placeholder="nombre-de-cuenta@dominio.com" aria-label="Cuenta de correo del usuario">
+      <input type="email" class="form-control" placeholder="nombre-de-cuenta@dominio.com" aria-label="Cuenta de correo del usuario">
       <div class="input-group-append">
         <button class="btn btn-outline-primary" type="button"><span class="material-icons">send</span></button>
       </div>
     </div>
   </form>
+  <form action="post" id="editarParticipante" class="form-group">
+    <div class="form-group row align-items-center">
+      <div class="col-sm-6">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="numParticipante">
+          <label class="form-check-label" for="numParticipante">
+            Nombre del participante
+          </label>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <select class="custom-select" id="votosAsignados">
+          <option selected>Votos asignados</option>
+          <option value="1">Uno</option>
+          <option value="2">Dos</option>
+          <option value="3">Tres</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Guardar cambios</button>
+  </form>
+
 </div>
