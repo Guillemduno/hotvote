@@ -1,0 +1,10 @@
+.no-bordes{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.bg-cover{
+    background-image: url("https://source.unsplash.com/user/erondu/daily");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
