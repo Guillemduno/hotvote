@@ -7,10 +7,14 @@ import { EntitySignupComponent } from './entity-signup/entity-signup.component';
 import { EntityEventComponent } from './entity-event/entity-event.component';
 import { EntityEditEventComponent } from './entity-edit-event/entity-edit-event.component';
 import { EntityInsertEventComponent } from './entity-insert-event/entity-insert-event.component';
+import { UserSignupComponent } from './user-signup/user-signup.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserEventComponent } from './user-event/user-event.component';
 import { UserVoteEventComponent } from './user-vote-event/user-vote-event.component';
 import { UserResultsEventComponent } from './user-results-event/user-results-event.component';
+
+
+
 const routes: Routes = [
   {path: '', component: StartPageComponent},
   {path: 'startPage', component: StartPageComponent},
@@ -19,6 +23,7 @@ const routes: Routes = [
   {path: 'entityEvent', component: EntityEventComponent},
   {path: 'entityEditEvent', component: EntityEditEventComponent},
   {path: 'entityInsertEvent', component: EntityInsertEventComponent},
+  {path: 'userSignUp', component: UserSignupComponent},
   {path: 'userForm', component: UserFormComponent},
   {path: 'userEvent', component: UserEventComponent},
   {path: 'userVoteEvent', component: UserVoteEventComponent},
