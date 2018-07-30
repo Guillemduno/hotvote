@@ -14,7 +14,7 @@ export class EntityEventComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    /*console.log(this._peticionesService.getPrueba());*/
+    
     this._peticionesService.getArticulos().subscribe(
       result => {
         this.articulos = result;

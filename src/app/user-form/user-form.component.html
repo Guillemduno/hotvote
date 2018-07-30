@@ -3,15 +3,19 @@
     <div class="py-5 text-center">
         <h1>Iniciar sesión</h1>
     </div>
-    <form method ="post" action="" id="userSignin" class="mt-5 mb-5">
+    <form (submit)=onSubmit() id="userSignin" class="mt-5 mb-5">
         <div class="form-group">
             <label for="emailUser">Cuenta de correo electrónico</label>
-            <input type="email" class="form-control" id="emailUser" aria-describedby="emailHelp" placeholder="nombre-de-cuenta@dominio.com">
+            <input type="email" name="email" [(ngModel)]="user.email" class="form-control" id="emailUser" aria-describedby="emailHelp" placeholder="nombre-de-cuenta@dominio.com">
         </div>
         <div class="form-group">
             <label for="passwordUser">Contraseña</label>
-            <input type="password" class="form-control" id="passwordUser" placeholder="Password">
+            <input type="password" name="password" [(ngModel)]="user.password" class="form-control" id="passwordUser" placeholder="Password">
         </div>
-        <button type="submit" class="btn btn-primary" routerLink="/userEvent">Iniciar sesión</button>
+       <!-- <button type="submit"  class="btn btn-primary" routerLink="/userEvent">Iniciar sesión</button> -->
+       <input type="submit" value="Iniciar sesión">
+        
     </form>
 </div>
+
+
