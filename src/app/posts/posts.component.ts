@@ -20,7 +20,7 @@ export class PostsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._peticonesService.getPosts().subscribe(
+    this._peticonesService.getArticulos().subscribe(
       result => {
         this.posts = result;
       },
