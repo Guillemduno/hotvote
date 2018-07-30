@@ -13,11 +13,11 @@ export class EntityFormComponent implements OnInit {
   constructor() { 
     this.entity = new ENTITY("","","");
     this.entities=[
-      new ENTITY("Associació Ciclista","asso@gmail.com","1234"),
-      new ENTITY("Associació Motos","asso@gmail.com","1234"),
+      /*new ENTITY("Associació Ciclista","asso@gmail.com","1234"),
+      new ENTITY("Associació Motos","asso@gmail.com","1234"),*/
     ];
   }
-
+  
   ngOnInit() {
   }
 

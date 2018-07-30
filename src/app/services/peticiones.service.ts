@@ -20,5 +20,10 @@ export class PeticionesService {
 
   getPosts(){
     return this._http.get(this.url).pipe(map(res => res.json()));
+
+  }
+
+  sendPost(){
+   /* this._http.post(this.url)*/
   }
 }
