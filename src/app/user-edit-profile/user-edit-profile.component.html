@@ -1,16 +1,16 @@
 <div class="container">
-    <button type="button" class="btn btn-light" routerLink="/userForm">Volver</button>
+    <img class="rounded-circle mx-auto d-block shadow-lg p-3 mb-5 rounded" width="200" height="200" src="https://api.adorable.io/avatars/285/JoseLuisEscoda@adorable.png" alt="user">
     <div class="py-5 text-center">
-        <h1>Dáte de alta como participante</h1>
+        <h1>Edita tus datos personales</h1>
     </div>
     <form method ="post" action="" id="userSignin" class="mt-5 mb-5">
       <div class="form-row">
         <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6">
-            <label for="idNumberUser">Número de identificación o DNI</label>
+            <label for="idNumberUser">Tu número de identificación fiscal o DNI</label>
             <input type="text" class="form-control" id="idNumberUser" placeholder="123456789-D">
         </div>
         <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6">
-            <label for="nameUser">Nombre del participante</label>
+            <label for="nameUser">Tu nombre</label>
             <input type="text" class="form-control" id="nameUser" placeholder="Manuel Doe">
         </div>
       </div>
@@ -34,6 +34,25 @@
           <label class="custom-file-label" for="imageUser">Seleccionar imagen</label>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary" routerLink="/userEvent">Darte de alta como participante</button>
+      <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#savedChanges" routerLink="/userEvent"><i class="material-icons">save</i><span class="align-text-bottom"> Guardar cambios</span></button>
     </form>
-</div>
+  </div>
+  <!--modal-->
+  <div class="modal fade" id="savedChanges" tabindex="-1" role="dialog" aria-labelledby="cambiosGuardados" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cambios guardados</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Los cambios han sido guardados satisfactóriamente.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>

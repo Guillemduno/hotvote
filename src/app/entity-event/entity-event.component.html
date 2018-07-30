@@ -23,8 +23,8 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus est, viverra at nulla et, aliquam tincidunt dui. Nulla quis odio a velit rhoncus tincidunt ut sit amet magna.</p>
             </td>
             <td>
-                <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#recordSent"><i class="material-icons">picture_as_pdf</i> Enviar acta</button>
-                <button type="button" class="btn btn-primary btn-sm"><i class="material-icons">subject</i> Ver acta</button>
+                <a class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#recordSent"><i class="material-icons">picture_as_pdf</i> Enviar acta</a>
+                <a class="btn btn-primary btn-sm"  routerLink="/entityResultsRecord"><i class="material-icons">subject</i> Ver acta</a>
               </td>
           </tr>
           <tr>
@@ -56,6 +56,24 @@
     </nav>
 
     <!-- Modal -->
+    <div class="modal fade" id="recordSent" tabindex="-1" role="dialog" aria-labelledby="borrarEvento" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Acta enviada</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            El acta ha sido enviada satisfactoriamente a todos los participantes.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="modal fade" id="deleteEvent" tabindex="-1" role="dialog" aria-labelledby="borrarEvento" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">

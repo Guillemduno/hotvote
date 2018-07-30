@@ -1,0 +1,58 @@
+<div class="container">
+  <img class="rounded mx-auto d-block shadow-sm" width="200" height="200" src="https://api.adorable.io/avatars/285/abott@adorable.png" alt="user">
+  <div class="py-5 text-center">
+      <h1>Edita los datos personales de la entidad</h1>
+  </div>
+  <form method ="post" action="" id="entityEditProfile" class="mt-5 mb-5">
+    <div class="form-row">
+      <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6">
+          <label for="idNumberEntity">Número de identificación de la entidad</label>
+          <input type="text" class="form-control" id="idNumberEntity" placeholder="123456789-D">
+      </div>
+      <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6">
+          <label for="nameEntity">Nombre de la identidad</label>
+          <input type="text" class="form-control" id="nameEntity" placeholder="AA.VV. El Coll-Vallcarca">
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="responsibleEntityName">Nombre del responsable de la entidad</label>
+        <input type="text" class="form-control" id="responsibleEntityName" placeholder="Juan Doe">
+    </div>
+    <div class="form-group">
+        <label for="emailEntity">Cuenta de correo electrónico</label>
+        <input type="email" class="form-control" id="emailEntity" placeholder="nombre-de-cuenta@dominio.com">
+    </div>
+    <div class="form-group">
+        <label for="passwordEntity">Contraseña</label>
+        <input type="password" class="form-control" id="passwordEntity" aria-describedby="passHelp" placeholder="Password">
+        <small id="passHelp" class="form-text text-muted">Debe ser de 8 a 20 caracteres, contener almenos una letra mayúscula y un símbolo: Contraseña1234!.</small>
+    </div>
+    <div class="form-group">
+      <label for="imageEvent" class="col-form-label">Imagen del evento</label>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="imageEvent" lang="es">
+        <label class="custom-file-label" for="imageEvent">Seleccionar imagen</label>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#savedChanges" routerLink="/entityEvent"><i class="material-icons">save</i><span class="align-text-bottom"> Guardar cambios</span></button>
+  </form>
+</div>
+<!--modal-->
+<div class="modal fade" id="savedChanges" tabindex="-1" role="dialog" aria-labelledby="cambiosGuardados" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cambios guardados</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Los cambios han sido guardados satisfactóriamente.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>

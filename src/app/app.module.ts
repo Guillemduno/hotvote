@@ -17,6 +17,8 @@ import { UserEventComponent } from './user-event/user-event.component';
 import { UserVoteEventComponent } from './user-vote-event/user-vote-event.component';
 import { UserResultsEventComponent } from './user-results-event/user-results-event.component';
 import { EntityResultsRecordComponent } from './entity-results-record/entity-results-record.component';
+import { EntityEditProfileComponent } from './entity-edit-profile/entity-edit-profile.component';
+import { UserEditProfileComponent } from './user-edit-profile/user-edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { EntityResultsRecordComponent } from './entity-results-record/entity-res
     UserEventComponent,
     UserVoteEventComponent,
     UserResultsEventComponent,
-    EntityResultsRecordComponent
+    EntityResultsRecordComponent,
+    EntityEditProfileComponent,
+    UserEditProfileComponent
   ],
   imports: [
     BrowserModule,
