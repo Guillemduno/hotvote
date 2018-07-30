@@ -1,0 +1,9 @@
+<h3>{{titulo}}</h3>
+
+  <ul>
+    <li *ngFor="let post of posts">
+        <h5><strong>#</strong>
+          {{post.id}} - {{post.title | uppercase}}</h5>
+        <p>{{post.body | titlecase}}</p>
+    </li>
+  </ul>
